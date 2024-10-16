@@ -18,7 +18,8 @@ int ft_putnbr(int n)
     }
 	if (n > 9) 
 	{
-        count += ft_putnbr(n / 10);
+        ft_putnbr(n / 10);
+        count++;
     }
     ft_putchar('0' + (n % 10));
 	count++;

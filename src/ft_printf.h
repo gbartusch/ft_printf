@@ -7,10 +7,13 @@
 
 int	ft_printf(const char *format, ...);
 int	handle_format(const char *format, va_list args);
-int convert_case(char c, va_list *args);
+int convert_case(char c, va_list args);
 void ft_putchar(char c);
 int ft_putnbr(int n);
 int ft_putstr(char *str);
+int print_address(void* ptr);
+int	convert_to_hex(size_t	num);
+
 
 
 
