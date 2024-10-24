@@ -34,11 +34,15 @@ int convert_case(char c, va_list args)
 	else if (c == 'x')
 	{
 		unsigned int hex = va_arg(args, unsigned int);
+		write(1, "0x", 2);
+		count += 2;
 		count += convert_to_hex(hex);
 	}
 	else if (c == 'X')
 	{
 		unsigned int hexi = va_arg(args, unsigned int);
+		write(1, "0x", 2);
+		count += 2;
 		count += uppercase_hex(hexi);
 	}
 	return (count);

@@ -17,7 +17,7 @@ int	uppercase_hex(size_t	num)
 	}
 	else if (num >= 16)
 	{
-		count += convert_to_hex(num / 16);
+		count += uppercase_hex(num / 16);
 		if ((num % 16) <= 9)
 		{
 			ft_putchar(num % 16 + '0');
