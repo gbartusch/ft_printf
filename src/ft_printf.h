@@ -13,6 +13,8 @@ int ft_putnbr(int n);
 int ft_putstr(char *str);
 int print_address(void* ptr);
 int	convert_to_hex(size_t	num);
+int ft_putnbr_unsigned(unsigned int n);
+int	uppercase_hex(size_t	num);
 
 
 

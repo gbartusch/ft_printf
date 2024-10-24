@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	convert_to_hex(size_t	num)
+int	uppercase_hex(size_t	num)
 {
 	int	count;
 
@@ -12,7 +12,7 @@ int	convert_to_hex(size_t	num)
 	}
 	else if (num > 9 && num < 16)
 	{
-		ft_putchar(num % 10 + 'a');
+		ft_putchar(num % 10 + 'A');
 		count++;
 	}
 	else if (num >= 16)
@@ -25,7 +25,7 @@ int	convert_to_hex(size_t	num)
 		}
 		else
 		{
-			ft_putchar((num % 16) % 10 + 'a');
+			ft_putchar((num % 16) % 10 + 'A');
 			count++;
 		}
 	}
