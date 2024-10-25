@@ -12,7 +12,10 @@ CFILES = $(SRC_DIR)/ft_printf.c \
 		$(SRC_DIR)/helper_functions/ft_putstr.c \
 		$(SRC_DIR)/helper_functions/print_address.c \
 		$(SRC_DIR)/helper_functions/uppercase_hex.c \
-		$(SRC_DIR)/helper_functions/convert_to_hex.c
+		$(SRC_DIR)/helper_functions/convert_to_hex.c \
+		$(SRC_DIR)/helper_functions/convert_case1.c \
+		$(SRC_DIR)/helper_functions/convert_case2.c \
+		$(SRC_DIR)/helper_functions/convert_case3.c
 OFILES = $(OBJ_DIR)/ft_printf.o \
 		$(OBJ_DIR)/helper_functions/ft_putchar.o \
 		$(OBJ_DIR)/helper_functions/ft_putnbr.o \
@@ -20,7 +23,10 @@ OFILES = $(OBJ_DIR)/ft_printf.o \
 		$(OBJ_DIR)/helper_functions/ft_putstr.o \
 		$(OBJ_DIR)/helper_functions/print_address.o \
 		$(OBJ_DIR)/helper_functions/uppercase_hex.o \
-		$(OBJ_DIR)/helper_functions/convert_to_hex.o
+		$(OBJ_DIR)/helper_functions/convert_to_hex.o \
+		$(OBJ_DIR)/helper_functions/convert_case1.o \
+		$(OBJ_DIR)/helper_functions/convert_case2.o \
+		$(OBJ_DIR)/helper_functions/convert_case3.o
 
 all: $(NAME)
 
