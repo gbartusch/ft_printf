@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
+/*   convert_case2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 15:33:35 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/25 15:57:28 by gbartusc         ###   ########.fr       */
+/*   Created: 2024/10/25 16:52:18 by gbartusc          #+#    #+#             */
+/*   Updated: 2024/10/25 17:20:52 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_unsigned(unsigned int n)
+int	convert_case2(char c, va_list args)
 {
-	int	count;
+	char			*string;
+	void			*pointer;
+	int				count;
 
 	count = 0;
-	if (n > 9)
+	if (c == 's')
 	{
-		ft_putnbr(n / 10);
-		count++;
+		string = va_arg(args, char *);
+		count += ft_putstr(string);
 	}
-	ft_putchar((n % 10) + '0');
-	count++;
+	else if (c == 'p')
+	{
+		pointer = va_arg(args, void *);
+		count += print_address(pointer);
+	}
 	return (count);
 }
