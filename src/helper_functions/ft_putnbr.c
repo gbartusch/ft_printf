@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:33:43 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/25 15:59:08 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:43:42 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ int	ft_putnbr(int n)
 	}
 	if (n > 9)
 	{
-		ft_putnbr(n / 10);
-		count++;
+		count += ft_putnbr(n / 10);
 	}
 	ft_putchar((n % 10) + '0');
 	count++;

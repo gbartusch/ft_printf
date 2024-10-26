@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:33:35 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/25 15:57:28 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/26 19:22:26 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ int	ft_putnbr_unsigned(unsigned int n)
 	count = 0;
 	if (n > 9)
 	{
-		ft_putnbr(n / 10);
-		count++;
+		count += ft_putnbr_unsigned(n / 10);
 	}
 	ft_putchar((n % 10) + '0');
 	count++;
