@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:53:41 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/27 10:15:33 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:20:24 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		handle_format(const char *format, va_list args);
 int		convert_case1(char c, va_list args);
 int		convert_case2(char c, va_list args);
 int		convert_case3(char c, va_list args);
-void	ft_putchar(char c);
+int		ft_putchar(char c);
 int		ft_putnbr(int n);
 int		ft_putstr(char *str);
 int		print_address(void *ptr);
@@ -35,6 +35,6 @@ int		ft_putnbr_unsigned(unsigned int n);
 int		uppercase_hex(size_t	num);
 void	error(void);
 int		invalid_conversion(char conversion);
-int     ft_strlen(char *str);
+int		ft_strlen(char *str);
 
 #endif

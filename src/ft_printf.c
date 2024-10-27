@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:32:40 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/27 10:54:26 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:31:48 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ int	handle_format(const char *format, va_list args)
 			i++;
 			if (format[i] == '%')
 			{
-				write(1, &format[i], 1);
-				count++;
+				count += ft_putchar(format[i]);
 			}
 			else if (!conversions(format[i]))
 				return (invalid_conversion(format[i]));
@@ -56,10 +55,7 @@ int	handle_format(const char *format, va_list args)
 				count += check_letter(format[i], args);
 		}
 		else
-		{
-			write(1, &format[i], 1);
-			count++;
-		}
+			count += ft_putchar(format[i]);
 		i++;
 	}
 	return (count);
@@ -76,28 +72,24 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	int		len;
-	int		len1;
-	char	*ptr = malloc(sizeof(int));
-	ptr = NULL;
-	len = 0;
-	len1 = 0;
-	
-	ft_printf("Testing single integer: %d\n", 5);
-	ft_printf("Testing single string: %s\n", "Hello");
-	ft_printf("Testing single pointer: %p\n", ptr);
-	ft_printf("Testing unsigned decimal: %u\n", 3000000000);
-	ft_printf("Testing single integer : %i\n", 101);
-	ft_printf("Testing lowercase hexadecimal number : %x\n", 0xde5);
-	ft_printf("Testing uppercase hexadecimal number : %X\n", 0xDE5);
-
-	len = ft_printf("Hello %d world! %c Life %s\n", 42, 'x', "Codam");
-	len1 = printf("Hello %d world! %c Life %s\n", 42, 'x', "Codam");
-	
-	ft_printf("Characters in total: %d\n", len);
-	printf("Characters in total: %d\n", len1);
-	return 0;
-}
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	int		len;
+// 	int		len1;
+// 	char	*ptr = malloc(sizeof(int));
+// 	len = 0;
+// 	len1 = 0;
+// 	ft_printf("Testing single integer: %d\n", 5);
+// 	ft_printf("Testing single string: %s\n", "Hello");
+// 	ft_printf("Testing single pointer: %p\n", ptr);
+// 	ft_printf("Testing unsigned decimal: %u\n", 3000000000);
+// 	ft_printf("Testing single integer : %i\n", 101);
+// 	ft_printf("Testing lowercase hexadecimal number : %x\n", 0xde5);
+// 	ft_printf("Testing uppercase hexadecimal number : %X\n", 0xDE5);
+// 	len = ft_printf("Hello %d world! %c Life %s\n", 42, 'x', "Codam");
+// 	len1 = printf("Hello %d world! %c Life %s\n", 42, 'x', "Codam");
+// 	ft_printf("Characters in total: %d\n", len);
+// 	printf("Characters in total: %d\n", len1);
+// 	return 0;
+// }

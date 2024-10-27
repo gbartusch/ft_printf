@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:51:50 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/27 10:13:41 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:18:03 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ int	convert_case1(char c, va_list args)
 	else if (c == 'c')
 	{
 		z = va_arg(args, int);
-		ft_putchar((char)z);
-		count += 1;
+		count += ft_putchar((char)z);
 	}
 	return (count);
 }

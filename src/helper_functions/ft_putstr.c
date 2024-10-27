@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:33:50 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/27 10:16:08 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:25:35 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_strlen(char *str)
 	i = 0;
 	while (str[i])
 		i++;
-	return(i);
+	return (i);
 }
 
 int	ft_putstr(char *str)
@@ -33,6 +33,7 @@ int	ft_putstr(char *str)
 		count += 6;
 		return (count);
 	}
-	write (1, str, ft_strlen(str));
-	return (ft_strlen(str));
+	count = ft_strlen(str);
+	write (1, str, count);
+	return (count);
 }

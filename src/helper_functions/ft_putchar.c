@@ -6,13 +6,14 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:33:00 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/25 15:56:07 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:16:50 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }
