@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:53:41 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/26 19:24:31 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 10:15:33 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int		ft_putnbr_unsigned(unsigned int n);
 int		uppercase_hex(size_t	num);
 void	error(void);
 int		invalid_conversion(char conversion);
+int     ft_strlen(char *str);
 
 #endif
