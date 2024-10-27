@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:53:41 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/27 11:20:24 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 17:54:52 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ int		print_address(void *ptr);
 int		convert_to_hex(size_t	num);
 int		ft_putnbr_unsigned(unsigned int n);
 int		uppercase_hex(size_t	num);
-void	error(void);
+void	print_error(void);
 int		invalid_conversion(char conversion);
 int		ft_strlen(char *str);
+int		invalid_format(void);
 
 #endif

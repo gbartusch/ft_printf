@@ -8,25 +8,21 @@ DIRECTORIES = obj/helper_functions
 CFILES = $(SRC_DIR)/ft_printf.c \
 		$(SRC_DIR)/helper_functions/ft_putchar.c \
 		$(SRC_DIR)/helper_functions/ft_putnbr.c \
-		$(SRC_DIR)/helper_functions/ft_putnbr_unsigned.c \
 		$(SRC_DIR)/helper_functions/ft_putstr.c \
 		$(SRC_DIR)/helper_functions/print_address.c \
 		$(SRC_DIR)/helper_functions/uppercase_hex.c \
 		$(SRC_DIR)/helper_functions/convert_to_hex.c \
-		$(SRC_DIR)/helper_functions/convert_case1.c \
-		$(SRC_DIR)/helper_functions/convert_case2.c \
-		$(SRC_DIR)/helper_functions/convert_case3.c
+		$(SRC_DIR)/helper_functions/convert_case.c \
+		$(SRC_DIR)/helper_functions/print_error.c
 OFILES = $(OBJ_DIR)/ft_printf.o \
 		$(OBJ_DIR)/helper_functions/ft_putchar.o \
 		$(OBJ_DIR)/helper_functions/ft_putnbr.o \
-		$(OBJ_DIR)/helper_functions/ft_putnbr_unsigned.o \
 		$(OBJ_DIR)/helper_functions/ft_putstr.o \
 		$(OBJ_DIR)/helper_functions/print_address.o \
 		$(OBJ_DIR)/helper_functions/uppercase_hex.o \
 		$(OBJ_DIR)/helper_functions/convert_to_hex.o \
-		$(OBJ_DIR)/helper_functions/convert_case1.o \
-		$(OBJ_DIR)/helper_functions/convert_case2.o \
-		$(OBJ_DIR)/helper_functions/convert_case3.o
+		$(OBJ_DIR)/helper_functions/convert_case.o \
+		$(OBJ_DIR)/helper_functions/print_error.o
 
 all: $(NAME)
 

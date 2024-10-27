@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:33:50 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/27 11:25:35 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:17:19 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,7 @@ int	ft_strlen(char *str)
 
 int	ft_putstr(char *str)
 {
-	int		count;
-
-	count = 0;
-	if (!str)
-	{
-		write (1, "(null)", 7);
-		count += 6;
-		return (count);
-	}
-	count = ft_strlen(str);
-	write (1, str, count);
-	return (count);
+	if (str == NULL)
+		return (write (1, "(null)", 6));
+	return (write (1, str, ft_strlen(str)));
 }

@@ -6,7 +6,7 @@
 /*   By: gbartusc <gbartusc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:32:40 by gbartusc          #+#    #+#             */
-/*   Updated: 2024/10/27 11:31:48 by gbartusc         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:02:24 by gbartusc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,12 +77,16 @@ int	ft_printf(const char *format, ...)
 // {
 // 	int		len;
 // 	int		len1;
-// 	char	*ptr = malloc(sizeof(int));
+// 	char	*ptr = 0;
 // 	len = 0;
 // 	len1 = 0;
 // 	ft_printf("Testing single integer: %d\n", 5);
-// 	ft_printf("Testing single string: %s\n", "Hello");
+// 	// ft_printf("Testing single string: %s\n", (char *)0);
+// 	len = printf("or:  NULL %s NULL \n", NULL);
+// 	len1 = ft_printf("ft:  NULL %s NULL \n", NULL);
+// 	printf("%d - %d\n", len, len1);
 // 	ft_printf("Testing single pointer: %p\n", ptr);
+// 	printf("Testing single pointer: %p\n", ptr);
 // 	ft_printf("Testing unsigned decimal: %u\n", 3000000000);
 // 	ft_printf("Testing single integer : %i\n", 101);
 // 	ft_printf("Testing lowercase hexadecimal number : %x\n", 0xde5);
